@@ -22,15 +22,15 @@
         <div class="grid grid-cols-3 gap-4">
             <div class="bg-[#FFFFFF] border-2 border-[#F1F2F4] rounded-md p-5 ">
             <p class="text-[#323B49] font-medium text-[14px] pb-0.5">Total</p>
-            <p class="font-bold text-2xl text-[#002C5C]">8</p>
+            <p id="total" class="font-bold text-2xl text-[#002C5C]">0</p>
         </div>
             <div class="bg-[#FFFFFF] border-2 border-[#F1F2F4] rounded-md p-5 ">
             <p class="text-[#323B49] font-medium text-[14px] pb-0.5">Interview</p>
-            <p class="font-bold text-2xl text-[#10B981]">0</p>
+            <p id="interview" class="font-bold text-2xl text-[#10B981]">0</p>
         </div>
             <div class="bg-[#FFFFFF] border-2 border-[#F1F2F4] rounded-md p-5 ">
             <p class="text-[#323B49] font-medium text-[14px] pb-0.5">Rejected</p>
-            <p class="font-bold text-2xl text-[#EF4444]">0</p>
+            <p  id="rejected" class="font-bold text-2xl text-[#EF4444]">0</p>
         </div>
         </div>
         <hr class="border-b-2 border-[#E6E7E9] py-8">
@@ -47,7 +47,7 @@
 
         </div>
     </main>
-    <section class="w-[80%] mx-auto space-y-4">
+    <section id="allcards" class="w-[80%] mx-auto space-y-4">
         <div class="flex justify-between p-6 bg-[#FFFFFF] border-2 border-[#F1F2F4]">
             <div class="space-y-4">
                <div>
@@ -250,5 +250,6 @@ Full-time
         </div>
 
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
