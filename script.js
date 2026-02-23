@@ -3,12 +3,12 @@ let rejectedList =[];
 
 
 let totalCount = document.getElementById('total')
-let interviweCount = document.getElementById('Interview')
+let interviweCount = document.getElementById('interview')
 let rejectedCount =document.getElementById('rejected')
 
-const allTotalBtn = getElementById('all-btn');
-const allInterviewBtn =getElementById('all-interview');
-const allRejectedBtn = getElementById('all-rejected')
+const allTotalBtn =document.getElementById('all-total-btn');
+const allInterviewBtn = document.getElementById('all-interview-btn');
+const allRejectedBtn = document.getElementById('all-rejected-btn')
 
 
 const allcardsCount = document.getElementById("allcards")
@@ -23,17 +23,30 @@ rejectedCount.innerText =rejectedList.length;
 calculateCount()
 
 function toggleStyle(id){
-     allTotalBtn.classList.add('bg-white,text-white')
-    allInterviewBtn.classList.remove('bg-white' ,'text-gray')
-    allRejectedBtn.classList. remove('bg-white' ,'text-gray')
-
-
-    allTotalBtn.classList.remove('bg-[#3B82F6]' ,'text-white')
+     allTotalBtn.classList.remove('bg-[#3B82F6]' ,'text-white')
+     allTotalBtn.classList.add('bg-white','text-gray-500')
     allInterviewBtn.classList.remove('bg-[#3B82F6]' ,'text-white')
-    allRejectedBtn.classList. remove('bg-[#3B82F6]' ,'text-white')
-    console.log(id)
-    const selected = document.getElementById(id)
-    console.log(selected)
+    allInterviewBtn.classList.add('bg-white' ,'text-gray-500')
+    allRejectedBtn.classList.remove('bg-[#3B82F6]' ,'text-white')
+    allRejectedBtn.classList.add('bg-white' ,'text-gray-500')
 
-    selected.classList.remove
+   
+   
+    const selected = document.getElementById(id);
+    if(selected){
+      selected.classList.remove('bg-white','text-gray-500');
+      selected.classList.add('bg-[#3b82f6]','text-white')
+    }
 }
+
+
+mainCalculate.addEventListener('click' ,function (event){
+   const parentNode = event.target.parentNode.parentNode;
+   const mobile = parentNode.querySelector('.mobile').innerText
+   const native = parentNode.querySelector('.native').innerText
+   const remote = parentNode.querySelector('.remote').innerText
+   const applied = parentNode.querySelector('.applied').innerText
+   const build = parentNode.querySelector('.build').innerText
+console.log(mobile,native,remote,applied,build);
+
+})
